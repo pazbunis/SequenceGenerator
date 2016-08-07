@@ -1,5 +1,5 @@
 import generator as gen
-dna = gen.generate_random_dna([0.25, 0.25, 0.25, 0.25], 15)
+dna = gen.generate_random_dna([0.25, 0.25, 0.25, 0.25], 200)
 replaced_dna = gen.random_expression_replacement(dna, 'AAAAAA')
 
 print(dna)
