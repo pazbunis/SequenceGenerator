@@ -6,7 +6,7 @@ letter2num = dict((v, k) for k, v in num2letter.items())
 
 
 def generate_random_dna(probs, n):
-    """generates a sequence of n bases where probs are the probabilities of A, C,T, G"""
+    """generates a sequence of n bases where probs are the probabilities of A, C, T, G"""
     seq = (num2letter[np.argmax(np.random.multinomial(1, probs))] for j in range(0,n))
     return ''.join(seq)
 
