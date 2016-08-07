@@ -6,3 +6,4 @@ print(dna)
 print(replaced_dna)
 
 print(gen.dna_to_one_hot(dna))
+
