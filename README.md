@@ -1,2 +1,2 @@
 # SequenceGenerator
-Utilities for generating random DNA datasets 
+A utility library for generating random DNA datasets.
