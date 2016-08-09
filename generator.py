@@ -28,3 +28,10 @@ def random_expression_replacement(seq, rep_expression):
     idx = randint(0,num_bases - exp_length)
     output = seq[:idx] + rep_expression + seq[idx + exp_length:]
     return output
+
+
+def place_expression(seq, rep_expression, idx):
+    """places rep_expression inside seq, starting from idx"""
+    exp_length = len(rep_expression)
+    output = seq[:idx] + rep_expression + seq[idx + exp_length:]
+    return output
