@@ -2,7 +2,7 @@ import numpy as np
 from random import randint
 from random import sample
 
-num2letter = {0: 'A', 1: 'C', 2: 'T', 3: 'G'}
+num2letter = {0: 'A', 1: 'C', 2: 'G', 3: 'T'}
 letter2num = dict((v, k) for k, v in num2letter.items())
 
 
