@@ -1,5 +1,6 @@
 import numpy as np
 from random import randint
+from random import sample
 
 num2letter = {0: 'A', 1: 'C', 2: 'T', 3: 'G'}
 letter2num = dict((v, k) for k, v in num2letter.items())
@@ -7,8 +8,12 @@ letter2num = dict((v, k) for k, v in num2letter.items())
 
 def generate_random_dna(probs, n):
     """generates a sequence of n bases where probs are the probabilities of A, C, T, G"""
-    seq = (num2letter[np.argmax(np.random.multinomial(1, probs))] for j in range(0,n))
-    return ''.join(seq)
+    if len(probs) != 4:
+        print('probs must be of length 4!')
+        return
+    seq_nums = np.random.multinomial(n, probs)  # generates counts for each letter
+    seq = ''.join(list(num2letter[i] * seq_nums[i] for i in range(0,4)))  # generates a string like AAACCTGGG
+    return ''.join(sample(seq, n))
 
 
 def dna_to_one_hot(seq):
