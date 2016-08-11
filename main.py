@@ -11,7 +11,7 @@ def generate_sample(half_size, x_path, y_path):
             for i in range(0, 2 * half_size):
                 dna = gen.generate_random_dna([0.25, 0.25, 0.25, 0.25], 100)
                 if labels[i] == 1:
-                    dna = gen.random_expression_replacement(dna, 'TTTTCCCC')
+                    dna = gen.random_expression_replacement(dna, 'ACTGACTG')
                 x_file.write(dna + '\n')
                 y_file.write(str(labels[i]) + '\n')
 
